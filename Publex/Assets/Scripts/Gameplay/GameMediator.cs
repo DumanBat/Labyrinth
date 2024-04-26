@@ -10,6 +10,8 @@ namespace Publex.Gameplay
         private PlayerController _playerPrefab;
         [SerializeField]
         private MobileInputView _mobileInputView;
+        [SerializeField]
+        private CameraFollow _cameraFollow;
 
         private PlayerController _player;
 
@@ -17,6 +19,8 @@ namespace Publex.Gameplay
         {
             _player = Instantiate(_playerPrefab);
             _player.Init(_mobileInputView);
+
+            _cameraFollow.Init(_player.transform, _player.BasicCameraOffset);
         }
     }
 }

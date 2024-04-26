@@ -13,13 +13,17 @@ namespace Publex.Gameplay
         private Animator _animator;
         [SerializeField]
         private float _moveSpeed;
+        [SerializeField]
+        private Transform _basicCameraOffset;
+
+        private IMoveable _move;
 
         private StateMachine _stateMachine;
-        private IMoveable _move;
         private IInputService _input;
 
         private PlayerIdleState _idle;
 
+        public Transform BasicCameraOffset => _basicCameraOffset;
         public float MoveSpeed => _moveSpeed;
         public bool IsMoving => _input.MoveDirection != Vector3.zero;
 
@@ -37,7 +41,6 @@ namespace Publex.Gameplay
         public void Init(IInputService inputService)
         {
             _input = inputService;
-
             InitStates();
         }
 

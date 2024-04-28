@@ -25,7 +25,7 @@ namespace Publex.Gameplay.Behaviour
             _moveable = moveable;
             _input = input;
 
-            _moveSpeed = player.MoveSpeed;
+            _moveSpeed = player.Config.PlayerMoveSpeed;
         }
 
         public void OnEnter()

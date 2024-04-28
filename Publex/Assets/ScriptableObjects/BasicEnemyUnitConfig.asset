@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343e583e44414e245aafd38c6eb82137, type: 3}
+  m_Name: BasicEnemyUnitConfig
+  m_EditorClassIdentifier: 
+  _unitPrefab: {fileID: 7031896737051626993, guid: d69023e06a295204b86cd6451d7fead9, type: 3}
+  _patrolMoveSpeed: 0.75
+  _patrolIdleDuration: 3
+  _chaseMoveSpeed: 2.5
+  _attackReach: 1.5
+  _attackCooldown: 2
+  _aggroRadius: 6
+  _damage: 1

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93ad8fcd5f106ef47875707798961053
+guid: fd4c4206f284b1545a8b9096f720420e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -68,11 +68,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
+      name: Walk
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 300
+      lastFrame: 90
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

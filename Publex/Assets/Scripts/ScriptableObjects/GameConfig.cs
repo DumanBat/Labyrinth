@@ -9,7 +9,7 @@ namespace Publex.General
     public class GameConfig : ScriptableObject
     {
         [SerializeField]
-        private List<Level> _levels = new List<Level>();
+        private List<LevelConfig> _levelConfigs = new List<LevelConfig>();
         [SerializeField]
         private PlayerController _playerPrefab;
 
@@ -18,7 +18,7 @@ namespace Publex.General
         [SerializeField]
         private float _playerHealth;
 
-        public List<Level> Levels => _levels;
+        public List<LevelConfig> LevelConfigs => _levelConfigs;
         public PlayerController PlayerPrefab => _playerPrefab;
         public float PlayerMoveSpeed => _playerMoveSpeed;
         public float PlayerHealth => _playerHealth;

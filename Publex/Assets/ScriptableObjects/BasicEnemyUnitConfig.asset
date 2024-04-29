@@ -15,8 +15,8 @@ MonoBehaviour:
   _unitPrefab: {fileID: 7031896737051626993, guid: d69023e06a295204b86cd6451d7fead9, type: 3}
   _patrolMoveSpeed: 0.75
   _patrolIdleDuration: 3
-  _chaseMoveSpeed: 2.5
+  _chaseMoveSpeed: 3.7
   _attackReach: 1.5
   _attackCooldown: 2
-  _aggroRadius: 6
+  _aggroRadius: 4
   _damage: 1

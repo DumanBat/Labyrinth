@@ -23,22 +23,43 @@ namespace Publex.Gameplay
             _collider.enabled = true;
         }
 
-        public void OnTriggerEnter(Collider collision)
+        public void OnTriggerEnter(Collider other)
         {
-            var target = collision.GetComponent<ITarget>();
-            if (target == null)
-                return;
-
-            DetectedTarget = target;
+            CheckTargetInLineOfSight(other);
         }
 
-        public void OnTriggerExit(Collider collision)
+        public void OnTriggerStay(Collider other)
         {
-            var target = collision.GetComponent<ITarget>();
+            CheckTargetInLineOfSight(other);
+        }
+
+        public void OnTriggerExit(Collider other)
+        {
+            var target = other.GetComponent<ITarget>();
+            if (target != null && DetectedTarget == target)
+            {
+                DetectedTarget = null;
+            }
+        }
+
+        private void CheckTargetInLineOfSight(Collider other)
+        {
+            var target = other.GetComponent<ITarget>();
             if (target == null)
                 return;
 
-            DetectedTarget = null;
+            DetectedTarget = IsTargetInLineOfSight(target) ? target : null;
+        }
+
+        private bool IsTargetInLineOfSight(ITarget target)
+        {
+            Vector3 direction = target.Position.GetPosition() - transform.position;
+            if (Physics.Raycast(transform.position, direction, out RaycastHit hit, _collider.radius))
+            {
+                if (hit.collider.gameObject == target.GetGameObject())
+                    return true;
+            }
+            return false;
         }
     }
 }

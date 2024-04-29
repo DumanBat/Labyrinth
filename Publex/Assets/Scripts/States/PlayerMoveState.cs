@@ -39,6 +39,7 @@ namespace Publex.Gameplay.Behaviour
             {
                 return;
             }
+
             var moveDirection = _input.MoveDirection;
             var lookRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             _player.transform.rotation = Quaternion.RotateTowards(_player.transform.rotation, lookRotation, 720f * Time.deltaTime);

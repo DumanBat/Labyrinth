@@ -94,14 +94,11 @@ namespace Publex.Gameplay.Behaviour
                 yield return null;
             }
             var attackLength = Mathf.Abs(_animator.GetCurrentAnimatorStateInfo(0).length - timePassed);
-            var waitForSeconds = new WaitForSeconds(attackLength / 2);
 
-            yield return waitForSeconds;
-
+            yield return new WaitForSeconds(attackLength / 3);
             if (_target != null)
                 _attack.Attack(_target, _damage);
-
-            yield return waitForSeconds;
+            yield return new WaitForSeconds((attackLength / 3) * 2);
 
             SetAttackAnimation(false);
         }

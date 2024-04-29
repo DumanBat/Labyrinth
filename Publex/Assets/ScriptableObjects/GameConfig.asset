@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e3106653fc86846813652709633c0f, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  _levels:
-  - {fileID: 8383692644014472144, guid: 604984b87d9ebcd43916aec2e33d4868, type: 3}
+  _levelConfigs:
+  - {fileID: 11400000, guid: efe834af57a66b742b53886c5a76a69d, type: 2}
   _playerPrefab: {fileID: 4152785352888623254, guid: f87ca6e41e828ba4f8a661dee0f28b2f, type: 3}
-  _playerMoveSpeed: 0.7
-  _playerHealth: 3
+  _playerMoveSpeed: 0.45
+  _playerHealth: 1

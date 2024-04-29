@@ -24,6 +24,7 @@ namespace Publex.Gameplay.Utils
         {
             Idle,
             Move,
+            ReturnToSpawnPoint,
             Patrol,
             Aggro,
             Attack,

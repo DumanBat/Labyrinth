@@ -8,5 +8,6 @@ namespace Publex.Gameplay.Behaviour
     {
         public IHealth Health { get; }
         public IPosition Position { get; }
+        public GameObject GetGameObject();
     }
 }
